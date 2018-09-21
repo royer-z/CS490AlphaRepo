@@ -1,3 +1,9 @@
+<?php
+
+echo("My first PHP script!");
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -6,8 +12,5 @@
 </head>
 
 <body>
-	<?php
-		echo("My first PHP script!");
-	?>
 </body>
 </html>
