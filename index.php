@@ -1,6 +1,6 @@
 <?php
 
-echo("My first PHP script!");
+echo("First PHP script!");
 
 ?>
 
