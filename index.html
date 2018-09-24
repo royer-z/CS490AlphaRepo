@@ -3,48 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<title>Login Screen (Alpha)</title>
-	<script>
-		// Send form data to PHP using Fetch
-		function sendToPHP(user, pass) {
-			var userData = {username: user, password: pass};
-			
-			postData('login.php', userData)
-				.then(userData => console.log(JSON.stringify(userData)))
-				.catch(error => console.error(error));
-		}
-		
-		function postData(url, data) {
-			return fetch(url, {
-				method: "POST",
-				mode: "cors",
-				cache: "no-cache",
-				credentials: "same-origin",
-				headers: {
-					"Content-Type": "application/json; charset=utf-8",
-				},
-				redirect: "follow",
-				referrer: "no-referrer",
-				body: JSON.stringify(data),
-				})
-				.then(response => return response.json());
-		}	
-		
-		//receiveJSON() { // Receive JSON object
-			//var responseData = JSON.parse(string);
-			//var NJIT = responseData.njitLoginSucceeded;
-			//var BACKEND = responseData.backendLoginSucceeded;
-		//}
-	</script>
 </head>
 
 <body>
-	<form onsubmit="sendToPHP(username.value, password.value)">
+	<form id="onlyForm">
 		UCID:<br>
 		<input  type="text" name="username"><br>
 		Password:<br>
 		<input type="password" name="password"><br><br>
-		<input type="submit" name="submit" value="Login">
+		<button type="submit">Login</button>
 	</form>
-	<p id="result">Result:</p>
+	<p id="result">Result: </p>
+	
+	<script src="app.js"></script>
 </body>
 </html>
