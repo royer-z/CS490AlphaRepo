@@ -31,11 +31,11 @@ onlyForm.addEventListener('submit', function(e) {
 	.then( res => res.json()) // Once we have a response
 	.then (newData => { // Data from response ^
 		console.log(newData);
-		if(newData === 'error') {
-			result.innerHTML += "Error";
+		if(newData === 'Error') {
+			result.innerHTML = "Error";
 		}
 		else{
-			result.innerHTML += " NJIT: "+newData.njitLoginSucceded+" "+"Back-end: "+newData.backendLoginSucceeded;
+			result.innerHTML = " NJIT: "+newData.njitLoginSucceeded+" "+"Back-end: "+newData.backendLoginSucceeded;
 			//result.innerHTML += newData;
 		}
 	});
