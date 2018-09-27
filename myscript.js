@@ -11,17 +11,6 @@ onlyForm.addEventListener('submit', function(event) {
 	
 	fetch('login.php', {
 		method: 'POST',
-		/*
-		mode: 'cors',
-		cache: 'no-cache',
-		credentials: "same-origin",
-		headers: {
-			"Content-Type": "application/json; charset=utf-8",
-		},
-		redirect: "follow",
-		referrer: "no-referrer",
-		*/
-		//body: JSON.stringify(fData),
 		body: fData
 	})
 	.then( res => res.json()) // Once we have a response
